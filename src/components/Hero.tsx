@@ -12,12 +12,6 @@ export default function Hero() {
       />
 
       <div className="relative mx-auto max-w-6xl px-4 md:px-10">
-        <div className="flex items-center gap-2 md:gap-4 mb-6 md:mb-10 font-mono text-[10px] md:text-[11px] tracking-widest2 uppercase text-brass-light">
-          <span>Berkas No. 01/RA&amp;P/2026</span>
-          <span className="h-px flex-1 bg-brass-light/30" />
-          <span className="hidden sm:block">Jakarta Selatan</span>
-        </div>
-
         <div className="grid md:grid-cols-12 gap-6 md:gap-10 items-end">
           <div className="md:col-span-8">
             <p className="font-mono text-sm md:text-base lg:text-lg uppercase tracking-widest2 text-brass-light mb-4 md:mb-6">

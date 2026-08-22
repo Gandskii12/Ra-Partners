@@ -29,8 +29,9 @@ export default function Nav() {
           <span className="flex h-10 w-10 md:h-14 md:w-14 items-center justify-center rounded-full bg-ink text-brass font-display text-sm md:text-lg">
             RA
           </span>
-          <span className="font-display text-base md:text-lg tracking-tight text-ink hidden sm:block">
-            RA <span className="italic font-normal">&amp; Partners</span>
+          <span className="font-display text-xl md:text-xl font-semibold tracking-tight text-ink">
+            <span className="md:hidden">Rully Amirulloh &amp; Partners</span>
+            <span className="hidden md:inline">RA &amp; Partners</span>
           </span>
         </a>
 
