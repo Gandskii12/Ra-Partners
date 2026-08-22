@@ -80,15 +80,11 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-10 flex flex-wrap gap-x-4 md:gap-x-6 gap-y-2 text-[10px] md:text-xs uppercase tracking-widest2 text-paper/50">
-          <span>Public Services Advocacy</span>
-          <span aria-hidden="true">·</span>
-          <span>Legal Advice</span>
-          <span aria-hidden="true">·</span>
-          <span>Legal Drafting</span>
-          <span aria-hidden="true">·</span>
-          <span>Sengketa Pertanahan</span>
-          <span aria-hidden="true">·</span>
+        <div className="mt-8 md:mt-10 flex flex-wrap items-center justify-center md:justify-start gap-x-4 md:gap-x-6 gap-y-2 text-[10px] md:text-xs uppercase tracking-widest2 text-paper/50">
+          <span>Public Services Advocacy ·</span>
+          <span>Legal Advice ·</span>
+          <span>Legal Drafting ·</span>
+          <span>Sengketa Pertanahan ·</span>
           <span>Audit Investigatif</span>
         </div>
       </div>

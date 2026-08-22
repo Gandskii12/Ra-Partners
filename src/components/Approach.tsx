@@ -82,10 +82,10 @@ export default function Approach() {
         </div>
 
         <div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 py-8 md:py-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 py-8 md:py-10">
             {STEPS.map((s, index) => (
               <div key={s.no} className="relative">
-                <div className="flex flex-col items-center text-center">
+                <div className="lg:bg-transparent lg:border-none lg:p-0 lg:hover:bg-transparent bg-paper/5 border border-paper/20 rounded-2xl p-6 sm:p-8 flex flex-col items-center text-center hover:bg-paper/10 transition-colors">
                   <StepIcon gif={s.gif} fallback={s.fallback} />
                   <span className="font-display text-3xl md:text-4xl text-brass-light mb-2">
                     {s.no}
@@ -154,9 +154,9 @@ export default function Approach() {
             </div>
 
             {/* Decision branches */}
-            <div className="grid md:grid-cols-2 gap-12 md:gap-20 mt-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-20 mt-12">
               {/* Left branch */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center md:bg-transparent md:border-none md:p-0 bg-paper/5 border border-paper/20 rounded-2xl p-6">
                 <div className="bg-paper/5 border border-paper/20 px-6 py-3 rounded-xl text-center mb-6 w-full">
                   <p className="font-display text-lg font-medium text-paper/40">Bukan Kewenangan</p>
                 </div>
@@ -185,7 +185,7 @@ export default function Approach() {
               </div>
 
               {/* Right branch */}
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center md:bg-transparent md:border-none md:p-0 bg-brass/5 border border-brass/20 rounded-2xl p-6">
                 <div className="bg-brass/10 border border-brass/40 px-6 py-3 rounded-xl text-center mb-6 w-full">
                   <p className="font-display text-lg font-medium text-brass-light">Kewenangan</p>
                 </div>
