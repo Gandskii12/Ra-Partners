@@ -529,7 +529,7 @@ export default function Testimonials() {
 
             <div className="mt-6 text-center">
               <p className="text-ink/60 text-sm">
-                Video akan dimuat saat Anda klik play untuk menghemat data
+                Klik tombol play untuk memuat dan memutar video testimoni
               </p>
             </div>
           </div>
