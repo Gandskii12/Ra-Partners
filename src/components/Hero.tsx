@@ -53,7 +53,7 @@ export default function Hero() {
             <div className="text-center sm:text-left">
               <p className="font-display text-2xl md:text-3xl lg:text-4xl">Rully Amirulloh</p>
               <p className="text-brass-light text-sm md:text-base uppercase tracking-widest2 mt-2">
-                Advokat &amp; Investigator — RA &amp; Partners
+                Advokat &amp; Investigator
               </p>
             </div>
           </div>
