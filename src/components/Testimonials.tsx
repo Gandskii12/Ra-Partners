@@ -58,6 +58,7 @@ export default function Testimonials() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const [videoError, setVideoError] = useState<string | null>(null);
+  const [hasStartedLoading, setHasStartedLoading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   
   // Poster carousel state
@@ -293,8 +294,22 @@ export default function Testimonials() {
     setIsVideoLoaded(false);
   };
 
+  const startVideoLoad = () => {
+    if (!hasStartedLoading) {
+      setHasStartedLoading(true);
+      if (videoRef.current) {
+        videoRef.current.load();
+      }
+    }
+  };
+
   const toggleVideoPlay = () => {
     if (!videoRef.current) return;
+    
+    // Start loading video on first play
+    if (!hasStartedLoading) {
+      startVideoLoad();
+    }
     
     if (isPlaying) {
       videoRef.current.pause();
@@ -455,10 +470,27 @@ export default function Testimonials() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-ink/10 max-w-2xl mx-auto">
               {!isVideoLoaded && !videoError && (
-                <div className="aspect-video flex items-center justify-center">
+                <div className="aspect-video flex items-center justify-center bg-ink/5">
                   <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-brass border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                    <p className="text-ink/50 text-sm">Memuat video...</p>
+                    {!hasStartedLoading ? (
+                      <>
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brass flex items-center justify-center shadow-xl mx-auto mb-4 cursor-pointer hover:bg-brass-light transition-colors" onClick={toggleVideoPlay}>
+                          <svg 
+                            className="w-8 h-8 md:w-10 md:h-10 text-ink ml-1" 
+                            fill="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8 5v14l11-7z"/>
+                          </svg>
+                        </div>
+                        <p className="text-ink/50 text-sm">Klik untuk memutar video</p>
+                      </>
+                    ) : (
+                      <>
+                        <div className="w-12 h-12 border-4 border-brass border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                        <p className="text-ink/50 text-sm">Memuat video...</p>
+                      </>
+                    )}
                   </div>
                 </div>
               )}
@@ -469,22 +501,20 @@ export default function Testimonials() {
                 className={`w-full h-auto ${isVideoLoaded ? 'block' : 'hidden'}`}
                 onLoadedData={handleVideoLoaded}
                 onError={handleVideoError}
-                controls={isLowEndDevice}
-                preload={isLowEndDevice ? 'none' : 'metadata'}
+                controls={true}
+                preload="none"
                 playsInline
-                {...(isLowEndDevice && {
-                  muted: true,
-                  autoPlay: false,
-                })}
+                muted={false}
+                autoPlay={false}
               />
 
-              {!isLowEndDevice && isVideoLoaded && (
+              {isVideoLoaded && !isPlaying && (
                 <button
                   onClick={toggleVideoPlay}
                   className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors group"
-                  aria-label={isPlaying ? "Pause" : "Play"}
+                  aria-label="Play"
                 >
-                  <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-brass flex items-center justify-center shadow-xl transform transition-transform group-hover:scale-110 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-brass flex items-center justify-center shadow-xl transform transition-transform group-hover:scale-110">
                     <svg 
                       className="w-8 h-8 md:w-10 md:h-10 text-ink ml-1" 
                       fill="currentColor" 
@@ -499,10 +529,7 @@ export default function Testimonials() {
 
             <div className="mt-6 text-center">
               <p className="text-ink/60 text-sm">
-                {isLowEndDevice 
-                  ? "Mode hemat data diaktifkan untuk perangkat dengan performa terbatas"
-                  : "Klik video untuk memutar/pause"
-                }
+                Video akan dimuat saat Anda klik play untuk menghemat data
               </p>
             </div>
           </div>
