@@ -1,3 +1,6 @@
+import kartuNama from "../assets/kartu nama.png";
+import detail from "../assets/detail.jpeg";
+
 export default function Contact() {
   return (
     <section id="kontak" className="bg-ink text-paper py-24 md:py-32">
@@ -67,7 +70,25 @@ export default function Contact() {
                 </dd>
               </div>
             </dl>
+
+            {/* Business Card */}
+            <div className="mt-12">
+              <img
+                src={kartuNama}
+                alt="Kartu Nama RA & Partners"
+                className="w-full h-auto rounded-lg shadow-2xl"
+              />
+            </div>
           </div>
+        </div>
+
+        {/* Detail Image */}
+        <div className="mt-16">
+          <img
+            src={detail}
+            alt="Detail Informasi"
+            className="w-full h-auto rounded-lg shadow-2xl"
+          />
         </div>
       </div>
     </section>

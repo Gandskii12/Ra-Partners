@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logo from "../assets/logo.jpeg";
 
 const LINKS = [
   { href: "#tentang", label: "Tentang" },
@@ -26,9 +27,11 @@ export default function Nav() {
     >
       <div className="mx-auto max-w-6xl px-4 md:px-10 flex items-center justify-between h-16 md:h-20">
         <a href="#top" className="flex items-center gap-2 md:gap-3 focus-ring">
-          <span className="flex h-10 w-10 md:h-14 md:w-14 items-center justify-center rounded-full bg-ink text-brass font-display text-sm md:text-lg">
-            RA
-          </span>
+          <img 
+            src={logo} 
+            alt="RA & Partners Logo" 
+            className="h-10 w-auto md:h-14 object-contain"
+          />
           <span className="font-display text-xl md:text-xl font-semibold tracking-tight text-ink">
             <span className="md:hidden">Rully Amirulloh &amp; Partners</span>
             <span className="hidden md:inline">RA &amp; Partners</span>
