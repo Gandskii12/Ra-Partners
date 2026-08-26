@@ -43,7 +43,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="mt-12 md:mt-16 flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10 border-t border-paper/15 pt-8 md:pt-10">
+        <div className="mt-12 md:mt-16 flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-10 pt-8 md:pt-10">
           <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
             <img
               src={ownerPakRully}
