@@ -1,6 +1,6 @@
 const CREDENTIALS = [
   "Advokat & Investigator Senior",
-  "18+ tahun di Ombudsman RI — Kepala Pemeriksaan",
+  "Memiliki reputasi dan pengalaman dalam bidang advokasi hukum & pelayanan publik lebih dari 23 tahun, di antaranya 18 tahun lebih di Ombudsman RI dengan jabatan terakhir sebagai Kepala Pemeriksaan",
   "Ratusan perkara diselesaikan tanpa ke pengadilan",
   "Biaya terjangkau, pro bono untuk yang tidak mampu",
   "Jaringan luas di APH, lembaga negara & instansi pemerintah",
@@ -29,8 +29,8 @@ export default function About() {
 
           <div className="md:col-span-8 md:pl-10 md:border-l border-ink/10">
             <p className="text-ink/80 text-lg leading-relaxed max-w-2xl text-justify">
-              <strong className="font-semibold">Rully Amirulloh &amp; Partners</strong>{" "}
-              — selanjutnya disebut <strong className="font-semibold">RA &amp; Partners</strong>,
+              <strong className="font-semibold">Rully Amirulloh And Partners</strong>{" "}
+              — selanjutnya disebut <strong className="font-semibold">RA & Partners</strong>,
               adalah firma hukum yang didirikan oleh Rully Amirulloh untuk menjembatani
               kesenjangan antara masyarakat, baik perorangan maupun
               korporasi, dengan penyelenggara negara. Kami memastikan setiap
@@ -40,8 +40,13 @@ export default function About() {
             </p>
 
             <ul className="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-4">
-              {CREDENTIALS.map((c) => (
-                <li key={c} className="flex gap-3 text-[15px] text-ink/75 leading-snug">
+              {CREDENTIALS.map((c, index) => (
+                <li 
+                  key={c} 
+                  className={`flex gap-3 text-[15px] text-ink/75 leading-snug ${
+                    index === 1 ? 'sm:col-span-2' : ''
+                  }`}
+                >
                   <span className="mt-2 h-1 w-1 shrink-0 bg-brass" aria-hidden="true" />
                   {c}
                 </li>

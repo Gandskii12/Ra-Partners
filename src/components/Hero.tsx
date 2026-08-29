@@ -55,6 +55,9 @@ export default function Hero() {
               <p className="text-brass-light text-sm md:text-base uppercase tracking-widest2 mt-2">
                 Advokat &amp; Investigator
               </p>
+              <p className="text-brass-light text-xs md:text-sm font-mono mt-1">
+                NIA: 26.26.33822
+              </p>
             </div>
           </div>
 
