@@ -29,7 +29,7 @@ export default function Nav() {
         <a href="#top" className="flex items-center focus-ring">
           <img 
             src={logo} 
-            alt="RA & Partners Logo" 
+            alt="RA and Partners Logo" 
             className="h-12 w-auto md:h-16 object-contain"
           />
         </a>

@@ -75,7 +75,7 @@ export default function Contact() {
             <div className="mt-12">
               <img
                 src={kartuNama}
-                alt="Kartu Nama RA & Partners"
+                alt="Kartu Nama RA and Partners"
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
             </div>

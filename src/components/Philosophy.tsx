@@ -15,7 +15,7 @@ export default function Philosophy() {
               Paradigma Lama
             </p>
             <p className="text-ink/70 leading-relaxed mb-6">
-              Setiap ada sengketa; tanah, waris, utang-piutang,pikiran
+              Setiap ada sengketa; tanah, waris, utang-piutang, pikiran
               pertama adalah &ldquo;lapor polisi&rdquo; atau &ldquo;gugat ke
               pengadilan&rdquo;.
             </p>
@@ -27,7 +27,7 @@ export default function Philosophy() {
           </div>
           <div className="bg-paper p-8 md:p-12">
             <p className="font-mono text-xs uppercase tracking-widest2 text-brass mb-4">
-              Pendekatan RA &amp; Partners
+              Pendekatan RA Partners
             </p>
             <p className="text-ink/70 leading-relaxed mb-6">
               Hukum bukan hanya soal pasal, tapi soal harmoni sosial.
