@@ -1,6 +1,6 @@
 # RA & Partners — Landing Page
 
-Landing page profil firma hukum RA & Partners, dibangun dengan React + TypeScript + Vite + Tailwind CSS, disusun dari materi Portofolio RA & Partners.
+Landing page profil firma hukum RA And Partners, dibuat menggunakan React + TypeScript + Vite + Tailwind CSS, disusun dari materi Portofolio RA & Partners.
 
 ## Menjalankan secara lokal
 
