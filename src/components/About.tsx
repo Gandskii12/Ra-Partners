@@ -30,7 +30,7 @@ export default function About() {
           <div className="md:col-span-8 md:pl-10 md:border-l border-ink/10">
             <p className="text-ink/80 text-lg leading-relaxed max-w-2xl text-justify">
               <strong className="font-semibold">Rully Amirulloh And Partners</strong>{" "}
-              — selanjutnya disebut <strong className="font-semibold">RA Partners</strong>,
+              — selanjutnya disebut <strong className="font-semibold">RA and Partners</strong>,
               adalah firma hukum yang didirikan oleh Rully Amirulloh untuk menjembatani
               kesenjangan antara masyarakat, baik perorangan maupun
               korporasi, dengan penyelenggara negara. Kami memastikan setiap

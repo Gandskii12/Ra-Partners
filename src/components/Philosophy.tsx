@@ -27,7 +27,7 @@ export default function Philosophy() {
           </div>
           <div className="bg-paper p-8 md:p-12">
             <p className="font-mono text-xs uppercase tracking-widest2 text-brass mb-4">
-              Pendekatan RA Partners
+              Pendekatan RA and Partners
             </p>
             <p className="text-ink/70 leading-relaxed mb-6">
               Hukum bukan hanya soal pasal, tapi soal harmoni sosial.
